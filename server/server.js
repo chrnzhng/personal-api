@@ -10,5 +10,12 @@ app.use( bodyParser.json() );
 
 app.use(middleware.addHeaders);
 
-const port = 3000;
+app.get('/name', mainCtrl.getName)
+app.get('/location', mainCtrl.getLocation)
+app.get('/occupations', mainCtrl.getOccupations)
+app.get('/occupations/latest', mainCtrl.getOccupationsLatest)
+app.get('/hobbies', mainCtrl.getHobbies)
+app.get('/hobbies/:type', mainCtrl.getHobbiesType)
+app.get('/family/?relation', mainCtrl.getFamily)
+const port = 3001;
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );

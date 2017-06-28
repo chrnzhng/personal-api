@@ -1,7 +1,7 @@
 var user = {
   name: "Jordan",
   location: "Here",
-  occupations: ["a","b"],
+  occupations: ["a","b", "c"],
   hobbies: [
     {
       name: "Necking",
@@ -9,22 +9,22 @@ var user = {
     },
     {
       name: "Necking",
-      type: "Physical"
+      type: "Spiritual"
     },
     {
       name: "Necking",
-      type: "Physical"
+      type: "Erotical"
     }
   ],
   family: [
     {
       name: "John",
-      relation: "Dad",
+      relation: "Father",
       gender: "Male"
     },
     {
       name: "Sherrie",
-      relation: "Mom",
+      relation: "Mother",
       gender: "Female"
     },{
       name: "Nick",
@@ -35,7 +35,7 @@ var user = {
   restaurants: [
     {
       name: "BJ's",
-      type: "Pub & Brewhouse",
+      type: "Brewhouse",
       rating: "9.8"
     },
     {
