@@ -28,15 +28,21 @@ module.exports = {
         })
         res.status(200).json(filteredHobbies)
     },
-    getFamily: (req, res, next) => {
-        res.status(200).json({
-            "family": user.family
+    getFamily: (req, res) => {
+        console.log(req.query)
+
+        let filteredFamily = user.family.filter((member) => {
+            return req.query.relation ? req.query.relation == member.relation : true;
         })
-        next();
-        (req, res) => {
-            let queryRelation = user.family.filter((relation))
-            return relation.relation == req.query.relation
-        }
+
+        res.status(200).json({
+            "family": filteredFamily
+        })
+     
+        // (req, res) => {
+        //     let queryRelation = user.family.filter((relation))
+        //     return relation.relation == req.query.relation
+        // }
     }
 }
 
